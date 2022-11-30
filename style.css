@@ -1,0 +1,59 @@
+:root {
+  --sg-green: #2c8548;
+  --content-background: #d9d9d9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--sg-green);
+}
+
+.container {
+  display: flex;
+}
+
+.container-lr {
+  flex: 1;
+  color: white;
+}
+
+.container-lr > a {
+  position: fixed;
+}
+
+.container-lr > a > img {
+  height: 10vw;
+}
+
+.container-c {
+  flex: 6;
+  display: flex;
+}
+
+.container-c > h1 {
+  color: white;
+}
+
+nav {
+  background-color: black;
+}
+
+.nav-item {
+  flex: 1;
+  color: white;
+}
+
+footer {
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+
+  background: black;
+  color: white;
+}
