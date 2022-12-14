@@ -128,17 +128,40 @@ footer {
   height: 100px;
 }
 
-.cool-container {
+.container-a {
   display: flex;
 }
 
+.container-c-a {
+  flex: 8;
+}
+
+.container-lr-a {
+  flex: 1;
+}
+.cool-container {
+  display: flex;
+  min-height: 50vh;
+}
+
 .cool-container-l1 {
-  flex: 5;
+  flex: 3;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   background-color: #2c8548;
 }
 .cool-container-r1 {
-  flex: 3;
-  background-color: #d9d9d9;
+  flex: 5;
+  padding: 10px;
+
+  background-image: url("res/img/sg-img/20221018_172310.jpg");
+
+  min-height: 40vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cool-container-l2 {
@@ -156,6 +179,7 @@ footer {
 
 .cool-font {
   color: white;
+  text-decoration: none;
 }
 
 #github-link {
