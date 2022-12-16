@@ -23,7 +23,7 @@ body {
 
 h1 {
   font-family: Minecraft, sans;
-  color: white;
+  color: black;
 }
 
 /*
@@ -108,7 +108,7 @@ nav {
 
 footer {
   padding: 10px 10px 10px 10px;
-  height: 100px;
+  height: 150px;
 
   background: black;
   color: white;
@@ -147,14 +147,19 @@ footer {
 .cool-container-l1 {
   flex: 3;
   padding: 10px;
+
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+
   background-color: #2c8548;
 }
 .cool-container-r1 {
   flex: 5;
-  padding: 10px;
 
+  padding: 10px;
+}
+
+#cool-container-sehenswuerdigkeiten {
   background-image: url("res/img/sg-img/20221018_172310.jpg");
 
   min-height: 40vh;
@@ -170,6 +175,12 @@ footer {
 }
 .cool-container-r2 {
   flex: 5;
+
+  padding: 10px;
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
   background-color: #2c8548;
 }
 
@@ -220,13 +231,30 @@ footer {
 @media only screen and (max-width: 700px) {
   .container-lr {
     flex-direction: column;
-    flex: 0.5;
+    flex: 0;
+  }
+
+  .cool-container {
+    flex-flow: column;
+  }
+
+  .container-lr-a {
+    flex: 0;
+  }
+
+  .container-c {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cool-container-l1 {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .container-lr {
-    flex-direction: column;
-    flex: 0;
+@media only screen and (max-width: 400px) {
+  .nav-item > a > p {
+    font-size: 15px;
   }
 }
