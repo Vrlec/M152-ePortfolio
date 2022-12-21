@@ -1,3 +1,7 @@
+/*
+  Imports
+*/
+
 @import url("https://fonts.cdnfonts.com/css/minecraft-4");
 @font-face {
   font-family: Minecraftia;
@@ -9,6 +13,9 @@
   --content-background: #d9d9d9;
 }
 
+/*
+  Divs, containers
+*/
 html {
   height: 100%;
   width: 100%;
@@ -21,24 +28,23 @@ body {
   position: relative;
 }
 
-h1 {
-  font-family: Minecraft, sans;
-  color: black;
+article {
+  min-height: calc(100vh - 360px);
 }
 
-/*
-h2 {
-  font-family: Minecraft, sans;
-}
-
-*/
-
-p {
-  font-family: Minecraftia;
+.header-container {
+  display: flex;
 }
 
 header {
   background-color: var(--sg-green);
+  flex: 1;
+  height: 160px;
+}
+
+nav {
+  background-color: black;
+  flex: 9;
 }
 
 .container {
@@ -60,13 +66,15 @@ header {
 }
 
 .container-c > img {
-  height: 100%;
+  width: 100%;
 }
 
 .container-c-head {
-  flex: 6;
-  height: 15vh;
-  display: flex;
+  width: 100%;
+}
+
+.container-c-head > img {
+  width: 100px;
 }
 
 .container-c {
@@ -85,19 +93,11 @@ header {
   color: white;
 }
 
-nav {
-  background-color: black;
-}
-
 .nav-item {
   flex: 1;
   color: white;
   text-align: center;
   border-radius: 50px;
-}
-
-.nav-item > a {
-  color: white;
 }
 
 .nav-item :hover {
@@ -107,8 +107,7 @@ nav {
 }
 
 footer {
-  padding: 10px 10px 10px 10px;
-  height: 150px;
+  height: 200px;
 
   background: black;
   color: white;
@@ -141,18 +140,21 @@ footer {
 }
 .cool-container {
   display: flex;
-  min-height: 50vh;
+}
+
+#cool-container-kathedrale {
+  flex-direction: column;
 }
 
 .cool-container-l1 {
   flex: 3;
-  padding: 10px;
 
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 
   background-color: #2c8548;
 }
+
 .cool-container-r1 {
   flex: 5;
 
@@ -169,14 +171,23 @@ footer {
   background-size: cover;
 }
 
+#cool-container-kathedrale-b {
+  background-image: url("res/img/sg-img/20221018_173750.jpg");
+
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .cool-container-l2 {
   flex: 3;
-  background-color: #d9d9d9;
+  background-color: var(--sg-green);
 }
+
 .cool-container-r2 {
   flex: 5;
-
-  padding: 10px;
 
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -188,43 +199,107 @@ footer {
   width: 100%;
 }
 
-.cool-font {
-  color: white;
+.google-maps {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 80%;
+  height: 40vh;
+}
+
+/*
+  H's, paragraphs, texts
+----------------------------
+*/
+
+h1 {
+  font-family: Minecraft, sans;
+  color: black;
+}
+
+h2 {
+  font-family: Minecraftia;
+  padding: 10px;
+}
+
+p {
+  font-family: Minecraftia;
+  padding: 10px;
+}
+
+a {
   text-decoration: none;
 }
 
+.nav-text {
+  padding: 0px;
+  text-decoration: underline;
+}
+
+.cool-font {
+  color: white;
+  text-decoration: white;
+  font-family: Minecraftia;
+}
+
+.nav-item > a {
+  color: white;
+}
+
+/*
+  Img, images
+----------------------------
+*/
 #github-link {
   height: 50px;
   text-align: center;
+  transition: transform 0.2s;
 }
 
 #github-link :hover {
-  transition: 100ms ease-out 100ms;
-  height: 75px;
+  transform: scale(0.75);
   text-align: center;
 }
 
 #github-img {
   height: 50px;
+  transition: transform 0.2s;
 }
 
 #github-img :hover {
-  transition: 100ms ease-out 100ms;
+  transform: scale(0.75);
   height: 75px;
 }
 
+#logolol {
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: transform 0.3s;
+}
+
+#logolol:hover {
+  transform: scale(1.25);
+}
+
 /*
-
-          <a href="home.html" class="link-img">
-            <img src="res/holy_gallus.svg" alt="Holly Gallus Logo" />
-          </a>
-
+  Media
+----------------------------
 */
-
 @media only screen and (max-width: 850px) {
   .container-lr {
     flex-direction: column;
     flex: 0.75;
+  }
+  .container-c {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #logolol {
+    width: 40%;
   }
 }
 
@@ -251,10 +326,38 @@ footer {
     border-bottom-left-radius: 0px;
     border-top-right-radius: 10px;
   }
+
+  .cool-container-r2 {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  p {
+    font-size: 15px;
+  }
+
+  .nav-text > a > p {
+    font-size: 10px;
+  }
+
+  .google-maps {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
   .nav-item > a > p {
     font-size: 15px;
   }
+  #logolol {
+    width: 50%;
+  }
 }
+
+/*
+
+          <a href="home.html" class="link-img">
+            <img src="res/holy_gallus.svg" alt="Holly Gallus Logo" />
+          </a>
+
+*/
