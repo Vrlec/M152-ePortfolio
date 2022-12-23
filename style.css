@@ -36,15 +36,39 @@ article {
   display: flex;
 }
 
-header {
+.header {
+  overflow: hidden;
   background-color: var(--sg-green);
-  flex: 1;
-  height: 160px;
+  padding: 10px;
+  height: 175px;
 }
 
-nav {
-  background-color: black;
-  flex: 9;
+.header a {
+  font-family: Minecraftia;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: underline;
+  line-height: 25px;
+  border-radius: 4px;
+
+  transition: transform 0.3s;
+}
+
+.header a.logo {
+  width: 8%;
+}
+
+.header a:hover {
+  background-color: white;
+  color: black;
+
+  transform: scale(1.25);
+}
+
+.header-right {
+  float: right;
 }
 
 .container {
@@ -93,21 +117,8 @@ nav {
   color: white;
 }
 
-.nav-item {
-  flex: 1;
-  color: white;
-  text-align: center;
-  border-radius: 50px;
-}
-
-.nav-item :hover {
-  transition: 50ms ease-out 50ms;
-  color: black;
-  background-color: white;
-}
-
 footer {
-  height: 200px;
+  height: 125px;
 
   background: black;
   color: white;
@@ -151,6 +162,15 @@ footer {
 
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+
+  background-color: #2c8548;
+}
+
+.cool-container-l1-landmark {
+  flex: 3;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
   background-color: #2c8548;
 }
@@ -245,6 +265,10 @@ a {
 
 .nav-item > a {
   color: white;
+}
+
+footer > p {
+  text-align: center;
 }
 
 /*
@@ -343,14 +367,29 @@ a {
   .google-maps {
     width: 100%;
   }
+
+  .header > a.logo > img {
+    width: 100%;
+  }
 }
 
-@media only screen and (max-width: 400px) {
-  .nav-item > a > p {
-    font-size: 15px;
+@media screen and (max-width: 500px) {
+  .header a {
+    display: block;
+    text-align: left;
+    float: none;
   }
-  #logolol {
-    width: 50%;
+
+  .header > a.logo {
+    width: 25%;
+  }
+
+  .header > a.logo > img {
+    width: 100%;
+  }
+
+  .header {
+    height: 350px;
   }
 }
 
